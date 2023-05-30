@@ -99,6 +99,11 @@ export class Customer2Component implements OnInit {
       zip: '',
     });
   }
+
+  //add address
+  addAddress(): void {
+    this.addresses.push(this.buildAddress());
+  }
   setMessage(c: AbstractControl): void {
     this.emailMessage = '';
     if ((c.touched || c.dirty) && c.errors) {
